@@ -9,4 +9,10 @@ to replace it. Its only that for `eb ssh` to work you need to have done
 
 
 *`Running`*
+`Export your aws credentials`
 
+    export AWS_ACCESS_KEY_ID={your_key}; export AWS_SECRET_ACCESS_KEY={your_secret_key}; export AWS_REGION=eu-west-1
+   
+`Run the aws commnad`
+    
+        docker run -it mwaaas/aws_ssh:latest -env {your eb environment}
