@@ -1,5 +1,5 @@
 version=latest
 
 deploy:
-	docker build -t mwaaas/awsSSh:$(latest) .
-	docker push mwaaas/awsSSh:$(latest)
+	docker build -t mwaaas/aws_ssh:$(version) .
+	docker push mwaaas/aws_ssh:$(version)
