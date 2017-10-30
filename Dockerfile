@@ -5,7 +5,7 @@ RUN apk update \
     && go get -u github.com/golang/dep/cmd/dep
 COPY . /go/src/github.com/mwaaas/awsSsh
 WORKDIR /go/src/github.com/mwaaas/awsSsh
-RUN go build -o awsSsh
+RUN dep ensure && go build -o awsSsh
 
 
 FROM alpine:latest
