@@ -15,4 +15,4 @@ to replace it. Its only that for `eb ssh` to work you need to have done
    
 `Run the aws commnad`
     
-        docker run -it mwaaas/aws_ssh:latest -env {your eb environment}
+        docker run -it -v ~/.ssh:/root/.ssh/ -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} mwaaas/aws_ssh:latest -env {your eb environment}
