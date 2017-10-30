@@ -13,6 +13,6 @@ to replace it. It's only that for `eb ssh` to work you need to have done
 
     export AWS_ACCESS_KEY_ID={your_key}; export AWS_SECRET_ACCESS_KEY={your_secret_key}; export AWS_REGION=eu-west-1
    
-`Run the aws command`
+`Run the aws command to ssh`
     
         docker run -it -v ~/.ssh:/root/.ssh/ -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} mwaaas/aws_ssh:latest -env {your eb environment}
