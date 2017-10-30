@@ -1,10 +1,10 @@
 **_awsSsh_**
 
-This is an utility to help us ssh to aws elastic beanstalk and 
+This is a utility to help us ssh to aws elastic beanstalk and 
 ecs 
 
 There is already aws tool `eb ssh` which works well, awsSsh is not meant
-to replace it. Its only that for `eb ssh` to work you need to have done 
+to replace it. It's only that for `eb ssh` to work you need to have done 
 `eb init` which works well but if you don't want to do that this tool is for you.
 
 
@@ -13,6 +13,6 @@ to replace it. Its only that for `eb ssh` to work you need to have done
 
     export AWS_ACCESS_KEY_ID={your_key}; export AWS_SECRET_ACCESS_KEY={your_secret_key}; export AWS_REGION=eu-west-1
    
-`Run the aws commnad`
+`Run the aws command`
     
         docker run -it -v ~/.ssh:/root/.ssh/ -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} mwaaas/aws_ssh:latest -env {your eb environment}
