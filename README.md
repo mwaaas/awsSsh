@@ -15,4 +15,6 @@ to replace it. It's only that for `eb ssh` to work you need to have done
    
 `Run the aws command to ssh`
     
-        docker run -it -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK  -v ~/.ssh:/root/.ssh/ -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} --entrypoint sh mwaaas/aws_ssh:latest 
+        docker run -it -v $(dirname $SSH_AUTH_SOCK):$(dirname $SSH_AUTH_SOCK) -e SSH_AUTH_SOCK=$SSH_AUTH_SOCK  -v ~/.ssh:/root/.ssh/ -e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} -e AWS_REGION=${AWS_REGION} --entrypoint sh mwaaas/aws_ssh:latest
+        
+     commit in tag 
